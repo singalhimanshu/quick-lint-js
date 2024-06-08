@@ -4518,6 +4518,11 @@ void Parser::parse_and_visit_if(Parse_Visitor_Base &v) {
   switch (this->peek().type) {
   default:
     parse_and_visit_body();
+    if (this->peek().type ==Token_Type::kw_if && !this->peek().has_leading_newline) {
+      this->diag_reporter_->report(Diag_Expected_Newline_After_If_Statement{
+          .where = this->peek().span(),
+      });
+    }
     break;
 
   // if (cond);  // Invalid TypeScript.

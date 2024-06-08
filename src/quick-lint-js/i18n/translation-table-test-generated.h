@@ -27,7 +27,7 @@ struct Translated_String {
 };
 
 // clang-format off
-inline const Translated_String test_translation_table[608] = {
+inline const Translated_String test_translation_table[609] = {
     {
         "\"global-groups\" entries must be strings"_translatable,
         u8"\"global-groups\" entries must be strings",
@@ -3161,6 +3161,17 @@ inline const Translated_String test_translation_table[608] = {
             u8"nombres hexadecimaux attendus dans une s\u00e9quence d'\u00e9chappement Unicode",
             u8"d\u00edgitos hexadecimais s\u00e3o esperados em uma sequ\u00eancia de escape Unicode",
             u8"f\u00f6rv\u00e4ntade hexadecimala siffror i Unicode flyktsekvens",
+        },
+    },
+    {
+        "expected newline after if statement"_translatable,
+        u8"expected newline after if statement",
+        {
+            u8"expected newline after if statement",
+            u8"expected newline after if statement",
+            u8"expected newline after if statement",
+            u8"expected newline after if statement",
+            u8"expected newline after if statement",
         },
     },
     {

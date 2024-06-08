@@ -938,6 +938,13 @@ struct Diag_Expected_Left_Curly {
   Source_Code_Span expected_left_curly;
 };
 
+struct Diag_Expected_Newline_After_If_Statement {
+  [[qljs::diag("E0459", Diagnostic_Severity::warning)]]  //
+  [[qljs::message("expected newline after if statement",
+                  ARG(where))]]  //
+  Source_Code_Span where;
+};
+
 struct Diag_Expected_Right_Paren_For_Function_Call {
   [[qljs::diag("E0141", Diagnostic_Severity::error)]]  //
   [[qljs::message("expected ')' to close function call",

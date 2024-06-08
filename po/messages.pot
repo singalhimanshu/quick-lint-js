@@ -838,6 +838,10 @@ msgid "expected '{{'"
 msgstr ""
 
 #: src/quick-lint-js/diag/diagnostic-metadata-generated.cpp
+msgid "expected newline after if statement"
+msgstr ""
+
+#: src/quick-lint-js/diag/diagnostic-metadata-generated.cpp
 msgid "expected ')' to close function call"
 msgstr ""
 

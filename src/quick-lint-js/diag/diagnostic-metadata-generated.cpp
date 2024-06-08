@@ -1780,6 +1780,20 @@ const QLJS_CONSTINIT Diagnostic_Info all_diagnostic_infos[] = {
       },
     },
 
+    // Diag_Expected_Newline_After_If_Statement
+    {
+      .code = 459,
+      .severity = Diagnostic_Severity::warning,
+      .message_formats = {
+        QLJS_TRANSLATABLE("expected newline after if statement"),
+      },
+      .message_args = {
+        {
+          Diagnostic_Message_Arg_Info(offsetof(Diag_Expected_Newline_After_If_Statement, where), Diagnostic_Arg_Type::source_code_span),
+        },
+      },
+    },
+
     // Diag_Expected_Right_Paren_For_Function_Call
     {
       .code = 141,

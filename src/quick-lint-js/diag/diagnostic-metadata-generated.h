@@ -127,6 +127,7 @@ namespace quick_lint_js {
   QLJS_DIAG_TYPE_NAME(Diag_Expected_From_Before_Module_Specifier) \
   QLJS_DIAG_TYPE_NAME(Diag_Expected_Hex_Digits_In_Unicode_Escape) \
   QLJS_DIAG_TYPE_NAME(Diag_Expected_Left_Curly) \
+  QLJS_DIAG_TYPE_NAME(Diag_Expected_Newline_After_If_Statement) \
   QLJS_DIAG_TYPE_NAME(Diag_Expected_Right_Paren_For_Function_Call) \
   QLJS_DIAG_TYPE_NAME(Diag_Expected_Parentheses_Around_Do_While_Condition) \
   QLJS_DIAG_TYPE_NAME(Diag_Expected_Parenthesis_Around_Do_While_Condition) \
@@ -479,7 +480,7 @@ namespace quick_lint_js {
   /* END */
 // clang-format on
 
-inline constexpr int Diag_Type_Count = 465;
+inline constexpr int Diag_Type_Count = 466;
 
 extern const Diagnostic_Info all_diagnostic_infos[Diag_Type_Count];
 }

@@ -296,7 +296,8 @@ const Translation_Table translation_data = {
         {30, 28, 35, 37, 38, 33},            //
         {36, 18, 44, 49, 37, 35},            //
         {32, 39, 44, 50, 41, 37},            //
-        {55, 81, 72, 73, 57, 55},            //
+        {0, 0, 0, 0, 0, 55},                 //
+        {55, 81, 72, 73, 57, 36},            //
         {64, 76, 69, 87, 73, 65},            //
         {0, 0, 0, 0, 0, 69},                 //
         {63, 58, 71, 93, 71, 35},            //
@@ -2171,6 +2172,7 @@ const Translation_Table translation_data = {
         u8"expected expression before newline\0"
         u8"expected expression before semicolon\0"
         u8"expected hexadecimal digits in Unicode escape sequence\0"
+        u8"expected newline after if statement\0"
         u8"expected parameter for arrow function, but got a literal instead\0"
         u8"expected parameter for arrow function, but got an expression instead\0"
         u8"expected variable name after '...'\0"

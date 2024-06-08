@@ -130,6 +130,22 @@ TEST_F(Test_Parse, commas_not_allowed_between_class_methods) {
   }
 }
 
+TEST_F(Test_Parse, warn_on_if_after_if_on_same_line) {
+  {
+    Test_Parser p(
+        u8"if (cond) {\n} if (cond) {\n}"_sv, capture_diags
+        );
+    p.parse_and_visit_statement();
+    CLI_Source_Position::Offset_Type end_of_first_if_statement = u8"if (cond) {\n})"_sv.size();
+    assert_diagnostics(p.code, p.errors,
+                       {
+                           DIAGNOSTIC_ASSERTION_SPAN(
+                               Diag_Expected_Newline_After_If_Statement,  //
+                               where, end_of_first_if_statement, u8" i"_sv),
+                       });
+  }
+}
+
 TEST_F(Test_Parse, asi_for_statement_at_right_curly) {
   {
     Test_Parser p(
